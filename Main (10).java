@@ -5,12 +5,6 @@ class Main {
     boolean running = true;
     Scanner input = new Scanner(System.in);
     while (running) {
-
-      System.out.println("Enter your first number");
-      double int1 = input.nextDouble();
-      System.out.println("Enter your second number");
-      double int2 = input.nextDouble();
-
       System.out.println("What function would you like to perform?");
 
       System.out.println("1. Addition");
@@ -18,8 +12,13 @@ class Main {
       System.out.println("3. Multiplication");
       System.out.println("4. Division");
       System.out.println("5. Raise to a Power");
-
+      System.out.println("6. Find the Square Root");
       int function = input.nextInt();
+
+      System.out.println("Enter your first number");
+      double int1 = input.nextDouble();
+      System.out.println("Enter your second number or type any number if getting a square root.");
+      double int2 = input.nextDouble();
       switch (function) {
         case 1:
           System.out.println(add(int1, int2));
@@ -36,7 +35,9 @@ class Main {
         case 5:
           System.out.println(pow(int1, int2));
           break;
-
+        case 6:
+          System.out.println(sqrt(int1));
+          break;
         default:
           System.out.println("Not a function from the menu.");
 
