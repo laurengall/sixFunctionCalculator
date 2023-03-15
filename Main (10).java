@@ -16,27 +16,27 @@ class Main {
       int function = input.nextInt();
 
       System.out.println("Enter your first number");
-      double int1 = input.nextDouble();
+      double double1 = input.nextDouble();
       System.out.println("Enter your second number or type any number if getting a square root.");
-      double int2 = input.nextDouble();
+      double double2 = input.nextDouble();
       switch (function) {
         case 1:
-          System.out.println(add(int1, int2));
+          System.out.println(add(double1, double2));
           break;
         case 2:
-          System.out.println(sub(int1, int2));
+          System.out.println(sub(double1, double2));
           break;
         case 3:
-          System.out.println(mult(int1, int2));
+          System.out.println(mult(double1, double2));
           break;
         case 4:
-          System.out.println(div(int1, int2));
+          System.out.println(div(double1, double2));
           break;
         case 5:
-          System.out.println(pow(int1, int2));
+          System.out.println(pow(double1, double2));
           break;
         case 6:
-          System.out.println(sqrt(int1));
+          System.out.println(sqrt(double1));
           break;
         default:
           System.out.println("Not a function from the menu.");
