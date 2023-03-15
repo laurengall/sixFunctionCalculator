@@ -7,9 +7,9 @@ class Main {
     while (running) {
 
       System.out.println("Enter your first number");
-      int int1 = input.nextInt();
+      double int1 = input.nextDouble();
       System.out.println("Enter your second number");
-      int int2 = input.nextInt();
+      double int2 = input.nextDouble();
 
       System.out.println("What function would you like to perform?");
 
@@ -39,13 +39,7 @@ class Main {
 
         default:
           System.out.println("Not a function from the menu.");
-          System.out.println("What function would you like to perform?");
-          System.out.println("1. Addition");
-          System.out.println("2. Subtraction");
-          System.out.println("3. Multiplication");
-          System.out.println("4. Division");
-          System.out.println("5. Raise to a Power");
-          function = input.nextInt();
+
           break;
       }
 
@@ -60,23 +54,27 @@ class Main {
     }
   }
 
-  public static double add(int a, int b) {
+  public static double add(double a, double b) {
     return a + b;
   }
 
-  public static double sub(int a, int b) {
+  public static double sub(double a, double b) {
     return a - b;
   }
 
-  public static double mult(int a, int b) {
+  public static double mult(double a, double b) {
     return a * b;
   }
 
-  public static double div(int a, int b) {
+  public static double div(double a, double b) {
     return a / b;
   }
 
-  public static double pow(int a, int b) {
+  public static double pow(double a, double b) {
     return Math.pow(a, b);
+  }
+
+  public static double sqrt(double a) {
+    return Math.sqrt(a);
   }
 }
