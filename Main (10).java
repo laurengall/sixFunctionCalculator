@@ -68,6 +68,12 @@ class Main {
   }
 
   public static double div(double a, double b) {
+    // check for divide by zero
+    if (b == 0) {
+      System.out.print("Cannot divide by zero: ");
+      return 0;
+
+    }
     return a / b;
   }
 
