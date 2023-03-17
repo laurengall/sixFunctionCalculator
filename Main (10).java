@@ -21,22 +21,22 @@ class Main {
       double double2 = input.nextDouble();
       switch (function) {
         case 1:
-          System.out.println(add(double1, double2));
+          add(double1, double2);
           break;
         case 2:
-          System.out.println(sub(double1, double2));
+          sub(double1, double2);
           break;
         case 3:
-          System.out.println(mult(double1, double2));
+          mult(double1, double2);
           break;
         case 4:
-          System.out.println(div(double1, double2));
+          div(double1, double2);
           break;
         case 5:
-          System.out.println(pow(double1, double2));
+          pow(double1, double2);
           break;
         case 6:
-          System.out.println(sqrt(double1));
+          sqrt(double1);
           break;
         default:
           System.out.println("Not a function from the menu.");
@@ -55,33 +55,40 @@ class Main {
     }
   }
 
-  public static double add(double a, double b) {
-    return a + b;
+  public static void add(double a, double b) {
+    double c = a + b;
+    System.out.println(a + " + " + b + " = " + c);
   }
 
-  public static double sub(double a, double b) {
-    return a - b;
+  public static void sub(double a, double b) {
+    double c = a - b;
+    System.out.println(a + " - " + b + " = " + c);
   }
 
-  public static double mult(double a, double b) {
-    return a * b;
+  public static void mult(double a, double b) {
+    double c = a * b;
+    System.out.println(a + " x " + b + " = " + c);
   }
 
-  public static double div(double a, double b) {
+  public static void div(double a, double b) {
     // check for divide by zero
     if (b == 0) {
       System.out.print("Cannot divide by zero: ");
-      return 0;
 
+    } else {
+      double c = a / b;
+      System.out.println(a + " / " + b + " = " + c);
     }
-    return a / b;
+
   }
 
-  public static double pow(double a, double b) {
-    return Math.pow(a, b);
+  public static void pow(double a, double b) {
+    double c = Math.pow(a, b);
+    System.out.println(a + " to the power of " + b + " = " + c);
   }
 
-  public static double sqrt(double a) {
-    return Math.sqrt(a);
+  public static void sqrt(double a) {
+    double c = Math.sqrt(a);
+    System.out.println("The square root of " + a + " = " + c);
   }
 }
